@@ -4,6 +4,15 @@ function iniciarjuego () {
 
      let botonMascotaEnemigo = document.getElementById('boton-mascota')
     botonMascotaEnemigo.addEventListener('click', seleccionarMascotaEnemigo)
+
+    let botonFuego = document.getElementById('boton-fuego')
+    botonFuego.addEventListener('click', ataqueFuego)
+
+    let botonAgua = document.getElementById('boton-agua')
+    botonAgua.addEventListener('click', ataqueAgua)
+
+    let botonTierra = document.getElementById('boton-tierra')
+    botonTierra.addEventListener('click', ataqueTierra) 
     
 }
 
@@ -96,5 +105,22 @@ function seleccionarMascotaEnemigo () {
         }
 
         }
+
+        let ataqueelegido
+
+        if (document.getElementById("boton-fuego").checked == true) {
+            let ataqueelegido = 'fuego'
+            alert("haz elegido fuego")
+
+        } else if (document.getElementById("boton-agua").checked == true) {
+            let ataqueelegido = 'Agua'
+            alert("haz elegido agua")
+        } else if (document.getElementByid("boton-tierra").checked == true) {
+            let ataqueelegido = 'tierra'
+            alert("haz elegido tierra")
+        } else {
+            alert("selecciona un ataque")
+        }
+
 
 window.addEventListener('load', iniciarjuego)
