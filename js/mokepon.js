@@ -98,3 +98,6 @@ function seleccionarMascotaEnemigo () {
         }
 
 window.addEventListener('load', iniciarjuego)
+
+
+//prueba de rama
